@@ -1,0 +1,27 @@
+.repo {
+    padding-top: 30px;
+    display: flex;
+    height: 100%;
+    gap: 30px;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(119, 115, 115, .5);
+        gap: 20px;
+        padding: 30px;
+        width: 100%;
+        height: 100%;
+    }
+    &__boards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 33%;
+        gap: 10px;
+    }
+    &__title {
+        font-size: 20px;
+        color: #636262;
+    }
+}

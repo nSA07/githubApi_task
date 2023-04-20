@@ -7,6 +7,7 @@ import * as yup from "yup";
 
 import { useDispatch } from "react-redux";
 import { getIssues } from '../../feature/issuesSlice'
+import { getData } from '../../feature/dataSlice'
 
 
 const SearchForm = () => {
@@ -29,6 +30,7 @@ const SearchForm = () => {
     const onSubmit = (elemnt) => {
         const data = elemnt.repoName.replace('https://github.com/', '').split('/')
         dispatch(getIssues(data))
+        dispatch(getData(data))
     };
 
   return (

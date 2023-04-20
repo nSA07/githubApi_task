@@ -5,8 +5,8 @@ const initialState = {
     issues: [],
 }
 
-export const getIssues = createAsyncThunk('issues/gerIssues',
-    async (data, { rejectWithValue, dispatch }) => {
+export const getIssues = createAsyncThunk('issues/getIssues',
+    async (data, { dispatch }) => {
         const res = await octokit.request("GET /repos/{owner}/{repo}/issues", {
                 owner: data[0],
                 repo: data[1],
@@ -22,11 +22,6 @@ export const issuesSlice = createSlice({
         setIssues : (state, action) => {
             state.issues = action.payload
         },
-    },
-    extraReducers: {
-        [getIssues.fulfilled]: () => console.log('fullfiels'),
-        [getIssues.pending]: () => console.log('pending'),
-        [getIssues.rejected]: () => console.log('rejected'),
     }
 })
 

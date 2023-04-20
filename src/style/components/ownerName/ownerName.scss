@@ -1,0 +1,14 @@
+.owner {
+    padding-top: 30px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    span {
+        font-size: 20px;
+        color: #318ae3;
+    }
+    &__organizations{
+        font-size: 18px;
+        color: #318ae3;
+    }
+}

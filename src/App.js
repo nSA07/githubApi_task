@@ -3,6 +3,7 @@ import { Container } from '@mui/material';
 //*Components
 import SearchForm from "./components/SearchForm/SearchForm";
 import RepoList from "./components/RepoItems/RepoList";
+import OwnerName from './components/OwnerName/OwnerName';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <Container maxWidth="xl">
         <SearchForm />
+        <OwnerName />
         <RepoList/>
       </Container>
     </div>

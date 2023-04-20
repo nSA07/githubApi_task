@@ -15,7 +15,7 @@ const OwnerName = () => {
       {data?.map(el =>       
       <div className='owner'>
           <a href={el.res.owner?.html_url} className='owner__organizations'>{el.res.owner?.login}</a>
-          <span>></span>
+          <span>{'>'}</span>
           <a href={el.res.html_url} className='owner__organizations'>{el.res.name}</a>
         </div>)}
     </>
